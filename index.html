@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Journal de l'Immobilier | FL Stratégimmo – Lens Arras Artois Bassin Minier</title>
+<meta name="description" content="Journal de l'immobilier par FL Stratégimmo : actualités immobilières, juridique, jurisprudence et investissement locatif sur Lens, Arras et le Bassin Minier."/>
+<meta name="keywords" content="immobilier Lens, investissement locatif Arras, immeuble de rapport Bassin Minier, jurisprudence immobilière, actualité immobilier 2025, FL Stratégimmo"/>
+<meta property="og:title" content="Journal de l'Immobilier – FL Stratégimmo"/>
+<meta property="og:description" content="Brèves juridiques, jurisprudence, actualités et conseils en investissement locatif – Lens, Arras, Artois."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --orange: #E8690A;
+    --orange-light: #f07d2a;
+    --dark: #1a1a1a;
+    --grey: #3A3A3A;
+    --mid: #5a5a5a;
+    --light: #f5f3ef;
+    --white: #ffffff;
+    --border: #e0dbd2;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Barlow', sans-serif; background: var(--light); color: var(--grey); min-height: 100vh; }
+
+  /* ── HEADER BLANC ── */
+  header {
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+    border-bottom: 3px solid var(--orange);
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 32px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .brand img {
+    height: 58px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .logo-fallback {
+    display: none;
+    width: 54px; height: 54px;
+    background: var(--orange); border-radius: 6px;
+    align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif; font-weight: 900; font-size: 18px; color: white;
+  }
+
+  .header-center { flex: 1; text-align: center; }
+
+  .journal-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px; font-weight: 700; letter-spacing: 4px;
+    text-transform: uppercase; color: var(--orange);
+  }
+
+  .journal-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px; font-weight: 900; color: var(--dark); line-height: 1; margin-top: 3px;
+  }
+
+  .date-zone { text-align: right; font-size: 11px; color: var(--mid); line-height: 1.7; flex-shrink: 0; }
+  .date-zone strong { color: var(--orange); display: block; font-size: 12px; }
+
+  /* ── TABS ── */
+  nav.tabs { display: flex; background: var(--dark); overflow-x: auto; }
+  .tab-btn {
+    flex: 1; min-width: 150px; padding: 13px 16px;
+    background: transparent; border: none; color: #aaa;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    cursor: pointer; transition: all .22s;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap; display: flex; align-items: center; justify-content: center; gap: 7px;
+  }
+  .tab-btn:hover { color: #fff; background: #252525; }
+  .tab-btn.active { color: #fff; border-bottom-color: var(--orange); background: #1e1e1e; }
+
+  /* ── MAIN ── */
+  main { max-width: 1140px; margin: 0 auto; padding: 36px 24px 60px; }
+  .tab-panel { display: none; animation: fadeUp .3s ease; }
+  .tab-panel.active { display: block; }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+
+  .section-header {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    margin-bottom: 26px; padding-bottom: 14px; border-bottom: 2px solid var(--border);
+    flex-wrap: wrap; gap: 10px;
+  }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; color: var(--dark); }
+  .section-subtitle { font-size: 13px; color: var(--mid); margin-top: 4px; }
+  .section-badge {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase;
+    background: var(--orange); color: white; padding: 4px 12px; border-radius: 2px; white-space: nowrap;
+  }
+
+  .generate-btn {
+    display: inline-flex; align-items: center; gap: 9px;
+    background: var(--orange); color: white; border: none;
+    padding: 12px 26px;
+    font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase;
+    cursor: pointer; border-radius: 4px; transition: background .2s, transform .15s; margin-bottom: 28px;
+  }
+  .generate-btn:hover:not(:disabled) { background: var(--orange-light); transform: translateY(-1px); }
+  .generate-btn:disabled { opacity: .55; cursor: not-allowed; }
+
+  .loader { display: none; align-items: center; gap: 12px; padding: 18px 0; color: var(--mid); font-size: 13px; }
+  .loader.visible { display: flex; }
+  .spinner { width: 20px; height: 20px; border: 3px solid var(--border); border-top-color: var(--orange); border-radius: 50%; animation: spin .7s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+  .article-card {
+    background: var(--white); border: 1px solid var(--border); border-radius: 8px;
+    overflow: hidden; display: flex; flex-direction: column;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .article-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,.09); }
+  .card-accent { height: 4px; background: var(--orange); }
+  .card-body { padding: 18px 20px; flex: 1; display: flex; flex-direction: column; }
+  .card-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--orange); margin-bottom: 7px; }
+  .card-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--dark); line-height: 1.35; margin-bottom: 10px; }
+  .card-text { font-size: 13px; line-height: 1.65; color: var(--mid); flex: 1; }
+  .card-footer { margin-top: 14px; padding-top: 11px; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px; }
+  .card-date { font-size: 11px; color: #aaa; }
+  .card-impact { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; white-space: nowrap; }
+  .impact-high { background: #fee2e2; color: #c0392b; }
+  .impact-med  { background: #fef3c7; color: #b7820a; }
+  .impact-low  { background: #d1fae5; color: #0e7a4f; }
+
+  /* Featured first card */
+  .articles-grid .article-card:first-child { grid-column: 1 / -1; flex-direction: row; }
+  .articles-grid .article-card:first-child .card-accent { width: 5px; height: auto; flex-shrink: 0; }
+  .articles-grid .article-card:first-child .card-body { padding: 24px 30px; }
+  .articles-grid .article-card:first-child .card-title { font-size: 21px; }
+  .articles-grid .article-card:first-child .card-text { font-size: 14px; }
+
+  .empty-state { text-align: center; padding: 52px 20px; color: var(--mid); }
+  .empty-icon { font-size: 42px; margin-bottom: 14px; }
+  .empty-state h3 { font-family: 'Playfair Display', serif; font-size: 19px; color: var(--dark); margin-bottom: 8px; }
+  .empty-state p { font-size: 13px; line-height: 1.65; }
+
+  footer {
+    background: var(--dark); color: #888; text-align: center;
+    padding: 20px 24px; font-size: 12px; border-top: 3px solid var(--orange); line-height: 1.9;
+  }
+  footer strong { color: var(--orange); }
+
+  @media(max-width: 640px) {
+    .header-top { padding: 10px 14px; }
+    .brand img { height: 42px; }
+    .journal-name { font-size: 18px; }
+    .date-zone { display: none; }
+    .articles-grid .article-card:first-child { flex-direction: column; }
+    .articles-grid .article-card:first-child .card-accent { width: auto; height: 4px; }
+    main { padding: 22px 14px 48px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <a class="brand" href="https://www.flstrategimmo.fr" target="_blank" rel="noopener">
+      <img src="https://d36vnx92dgl2c5.cloudfront.net/prod/Altera/3256/media/415f5f727902e4395e951bb4684c59f5.jpg"
+           alt="FL Stratégimmo"
+           onload="this.style.display='block'"
+           onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex'"/>
+      <div class="logo-fallback" id="logo-fallback">FL</div>
+    </a>
+
+    <div class="header-center">
+      <div class="journal-label">Publication digitale</div>
+      <div class="journal-name">Journal de l'Immobilier</div>
+    </div>
+
+    <div class="date-zone">
+      <strong id="current-date"></strong>
+      Lens · Arras · Artois<br/>Bassin Minier
+    </div>
+  </div>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab-btn active" onclick="switchTab('breves',this)">⚡ Brèves Juridiques</button>
+    <button class="tab-btn" onclick="switchTab('jurisprudence',this)">⚖️ Jurisprudence</button>
+    <button class="tab-btn" onclick="switchTab('actualites',this)">📰 Actualités</button>
+    <button class="tab-btn" onclick="switchTab('investissement',this)">🏢 Investissement Locatif</button>
+  </nav>
+</header>
+
+<main>
+
+  <section class="tab-panel active" id="panel-breves">
+    <div class="section-header">
+      <div><div class="section-title">Brèves Juridiques</div><div class="section-subtitle">Textes de loi, décrets, circulaires &amp; obligations réglementaires</div></div>
+      <span class="section-badge">Droit immobilier</span>
+    </div>
+    <button class="generate-btn" id="btn-breves" onclick="generateArticles('breves')">✦ Générer les brèves du jour</button>
+    <div class="loader" id="loader-breves"><div class="spinner"></div> Consultation des sources juridiques…</div>
+    <div class="articles-grid" id="grid-breves">
+      <div class="empty-state"><div class="empty-icon">⚡</div><h3>Brèves juridiques immobilières</h3><p>Cliquez sur le bouton pour générer les dernières brèves<br/>sur les textes de loi, décrets et obligations réglementaires.</p></div>
+    </div>
+  </section>
+
+  <section class="tab-panel" id="panel-jurisprudence">
+    <div class="section-header">
+      <div><div class="section-title">Jurisprudence</div><div class="section-subtitle">Décisions de justice &amp; commentaires pratiques pour professionnels</div></div>
+      <span class="section-badge">Tribunaux &amp; Cours</span>
+    </div>
+    <button class="generate-btn" id="btn-jurisprudence" onclick="generateArticles('jurisprudence')">✦ Générer la jurisprudence récente</button>
+    <div class="loader" id="loader-jurisprudence"><div class="spinner"></div> Analyse des décisions de justice…</div>
+    <div class="articles-grid" id="grid-jurisprudence">
+      <div class="empty-state"><div class="empty-icon">⚖️</div><h3>Jurisprudence immobilière</h3><p>Décisions de justice commentées : baux, copropriété,<br/>vices cachés, responsabilité, contentieux locatifs.</p></div>
+    </div>
+  </section>
+
+  <section class="tab-panel" id="panel-actualites">
+    <div class="section-header">
+      <div><div class="section-title">Actualités Immobilières</div><div class="section-subtitle">Marché, fiscalité, taux &amp; tendances – focus Hauts-de-France</div></div>
+      <span class="section-badge">Marché &amp; tendances</span>
+    </div>
+    <button class="generate-btn" id="btn-actualites" onclick="generateArticles('actualites')">✦ Générer les actualités</button>
+    <div class="loader" id="loader-actualites"><div class="spinner"></div> Veille du marché immobilier…</div>
+    <div class="articles-grid" id="grid-actualites">
+      <div class="empty-state"><div class="empty-icon">📰</div><h3>Actualités du marché</h3><p>Taux, prix au m², réformes fiscales, marché locatif<br/>sur Lens, Arras et le Bassin Minier.</p></div>
+    </div>
+  </section>
+
+  <section class="tab-panel" id="panel-investissement">
+    <div class="section-header">
+      <div><div class="section-title">Investissement Locatif</div><div class="section-subtitle">Stratégies, rendements &amp; opportunités – immeubles de rapport Artois</div></div>
+      <span class="section-badge">Stratégie &amp; rendement</span>
+    </div>
+    <button class="generate-btn" id="btn-investissement" onclick="generateArticles('investissement')">✦ Générer les analyses</button>
+    <div class="loader" id="loader-investissement"><div class="spinner"></div> Analyse des opportunités d'investissement…</div>
+    <div class="articles-grid" id="grid-investissement">
+      <div class="empty-state"><div class="empty-icon">🏢</div><h3>Investissement locatif</h3><p>Stratégies, rendements, immeubles de rapport<br/>sur Lens, Arras et la zone Artois – Bassin Minier.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <strong>FL Stratégimmo</strong> – 17 Rue Marcellin Berthelot, 62300 Lens &nbsp;|&nbsp;
+  <strong>+33 7 67 50 92 95</strong> &nbsp;|&nbsp; contact@flstrategimmo.com<br/>
+  Conseil en investissement immobilier · Immeubles de rapport · Lens – Arras – Artois – Bassin Minier<br/>
+  <small>Ce journal est généré par intelligence artificielle à titre informatif. Consultez un professionnel pour tout conseil personnalisé.</small>
+</footer>
+
+<script>
+document.getElementById('current-date').textContent =
+  new Date().toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+
+function switchTab(name, el) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('panel-' + name).classList.add('active');
+  el.classList.add('active');
+}
+
+// Prompts très courts = JSON compact = pas de troncature
+const PROMPTS = {
+  breves:`Tu es un expert juridique immobilier. Génère exactement 5 brèves pour un agent immobilier zone Lens-Arras, spécialisé immeubles de rapport.
+Thèmes possibles: loi Alur, DPE, baux, encadrement loyers, copropriété, réglementation.
+IMPORTANT: réponds UNIQUEMENT avec du JSON valide, rien d'autre. Texte de chaque article: 40 mots maximum.
+Format exact:
+[{"tag":"Loi","title":"Titre court","text":"Texte 40 mots max.","date":"2025","impact":"high"},{"tag":"DPE","title":"Titre","text":"Texte.","date":"2025","impact":"med"},{"tag":"Bail","title":"Titre","text":"Texte.","date":"2025","impact":"low"},{"tag":"Copropriété","title":"Titre","text":"Texte.","date":"2025","impact":"med"},{"tag":"Réglementation","title":"Titre","text":"Texte.","date":"2025","impact":"high"}]`,
+
+  jurisprudence:`Tu es juriste droit immobilier. Génère exactement 5 décisions jurisprudence récentes pour professionnel investissement locatif.
+IMPORTANT: réponds UNIQUEMENT avec du JSON valide, rien d'autre. Texte: 40 mots maximum par article.
+Format exact:
+[{"tag":"Cass. 3e civ.","title":"Titre","text":"Texte 40 mots max.","date":"2025","impact":"high"},{"tag":"CA Paris","title":"Titre","text":"Texte.","date":"2025","impact":"med"},{"tag":"Cass. 3e civ.","title":"Titre","text":"Texte.","date":"2025","impact":"high"},{"tag":"TJ","title":"Titre","text":"Texte.","date":"2025","impact":"low"},{"tag":"CA Douai","title":"Titre","text":"Texte.","date":"2025","impact":"med"}]`,
+
+  actualites:`Tu es analyste marché immobilier Hauts-de-France. Génère exactement 5 actualités pour professionnel Lens-Arras Bassin Minier.
+IMPORTANT: réponds UNIQUEMENT avec du JSON valide, rien d'autre. Texte: 40 mots maximum par article.
+Format exact:
+[{"tag":"Taux","title":"Titre","text":"Texte 40 mots max.","date":"2025","impact":"high"},{"tag":"Marché","title":"Titre","text":"Texte.","date":"2025","impact":"med"},{"tag":"Fiscalité","title":"Titre","text":"Texte.","date":"2025","impact":"high"},{"tag":"Locatif","title":"Titre","text":"Texte.","date":"2025","impact":"med"},{"tag":"Réforme","title":"Titre","text":"Texte.","date":"2025","impact":"low"}]`,
+
+  investissement:`Tu es conseiller en investissement locatif immeubles de rapport, zone Lens-Arras-Artois. Génère exactement 5 analyses stratégiques.
+IMPORTANT: réponds UNIQUEMENT avec du JSON valide, rien d'autre. Texte: 40 mots maximum par article.
+Format exact:
+[{"tag":"Rendement","title":"Titre","text":"Texte 40 mots max.","date":"2025","impact":"high"},{"tag":"Cash-flow","title":"Titre","text":"Texte.","date":"2025","impact":"med"},{"tag":"SCI","title":"Titre","text":"Texte.","date":"2025","impact":"med"},{"tag":"Travaux","title":"Titre","text":"Texte.","date":"2025","impact":"low"},{"tag":"Opportunité","title":"Titre","text":"Texte.","date":"2025","impact":"high"}]`
+};
+
+async function generateArticles(tab) {
+  const btn    = document.getElementById('btn-' + tab);
+  const loader = document.getElementById('loader-' + tab);
+  const grid   = document.getElementById('grid-' + tab);
+
+  btn.disabled = true;
+  btn.textContent = '⏳ Génération en cours…';
+  loader.classList.add('visible');
+  grid.innerHTML = '';
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        messages: [{ role: 'user', content: PROMPTS[tab] }]
+      })
+    });
+
+    if (!res.ok) {
+      const errData = await res.json().catch(() => ({}));
+      throw new Error('Erreur API ' + res.status + (errData.error ? ' : ' + errData.error.message : ''));
+    }
+
+    const data = await res.json();
+    const raw = data.content.map(b => b.text || '').join('').trim();
+
+    // Extraction robuste : on cherche le tableau JSON même si texte parasite
+    const match = raw.match(/\[[\s\S]*?\]/);
+    if (!match) throw new Error('Réponse non JSON. Réessayez.');
+
+    let articles;
+    try {
+      articles = JSON.parse(match[0]);
+    } catch(e) {
+      // Tentative nettoyage : supprimer caractères de contrôle
+      const cleaned = match[0].replace(/[\x00-\x1F\x7F]/g, ' ');
+      articles = JSON.parse(cleaned);
+    }
+
+    if (!Array.isArray(articles) || articles.length === 0) throw new Error('Aucun article reçu.');
+
+    grid.innerHTML = articles.map(a => `
+      <article class="article-card">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-tag">${esc(a.tag)}</div>
+          <h2 class="card-title">${esc(a.title)}</h2>
+          <p class="card-text">${esc(a.text)}</p>
+          <div class="card-footer">
+            <span class="card-date">📅 ${esc(a.date)}</span>
+            <span class="card-impact impact-${a.impact||'med'}">${impactLabel(a.impact)}</span>
+          </div>
+        </div>
+      </article>`).join('');
+
+  } catch(err) {
+    grid.innerHTML = `<div class="empty-state">
+      <div class="empty-icon">⚠️</div>
+      <h3>Erreur de génération</h3>
+      <p>${esc(err.message)}<br/>Veuillez réessayer dans un instant.</p>
+    </div>`;
+  } finally {
+    loader.classList.remove('visible');
+    btn.disabled = false;
+    btn.textContent = '↺ Actualiser';
+  }
+}
+
+function impactLabel(i) {
+  return i==='high' ? '🔴 Impact fort' : i==='low' ? '🟢 Impact faible' : '🟡 Impact modéré';
+}
+
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+</script>
+</body>
+</html>
