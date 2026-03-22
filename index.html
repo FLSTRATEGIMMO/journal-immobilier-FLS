@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Journal de l'Immobilier | FL Stratégimmo – Lens Arras Artois Bassin Minier</title>
 <meta name="description" content="Journal de l'immobilier par FL Stratégimmo : actualités immobilières, juridique, jurisprudence et investissement locatif sur Lens, Arras et le Bassin Minier."/>
-<meta name="keywords" content="immobilier Lens, investissement locatif Arras, immeuble de rapport Bassin Minier, jurisprudence immobilière, actualité immobilier 2025, FL Stratégimmo"/>
+<meta name="keywords" content="immobilier Lens, investissement locatif Arras, immeuble de rapport Bassin Minier, FL Stratégimmo, Artois, Hauts-de-France"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet"/>
 <style>
@@ -74,25 +74,21 @@
     letter-spacing: 2px; text-transform: uppercase;
     background: var(--orange); color: white; padding: 4px 12px; border-radius: 2px;
   }
-  .source-credit {
-    font-size: 11px; color: #bbb; margin-bottom: 20px; font-style: italic;
-  }
+  .source-credit { font-size: 11px; color: #bbb; margin-bottom: 20px; font-style: italic; }
   .source-credit span { color: var(--orange); font-style: normal; font-weight: 600; }
 
-  /* Loader */
   .loader { display: flex; align-items: center; gap: 12px; padding: 40px 0; color: var(--mid); font-size: 13px; }
   .loader.hidden { display: none; }
   .spinner { width: 20px; height: 20px; border: 3px solid var(--border); border-top-color: var(--orange); border-radius: 50%; animation: spin .7s linear infinite; }
   @keyframes spin { to { transform: rotate(360deg); } }
 
-  /* Grid */
   .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
   .article-card {
     background: var(--white); border: 1px solid var(--border); border-radius: 8px;
     overflow: hidden; display: flex; flex-direction: column;
     transition: transform .2s, box-shadow .2s;
     animation: fadeUp .4s ease both;
-    text-decoration: none; color: inherit;
+    text-decoration: none; color: inherit; cursor: pointer;
   }
   .article-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,.09); }
   .card-accent { height: 4px; background: var(--orange); }
@@ -103,22 +99,12 @@
   .card-footer { margin-top: 14px; padding-top: 11px; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px; }
   .card-date { font-size: 11px; color: #aaa; }
   .card-source { font-size: 10px; font-weight: 600; color: var(--orange); font-family: 'Barlow Condensed', sans-serif; letter-spacing: 1px; text-transform: uppercase; }
-  .read-more { font-size: 11px; color: var(--orange); font-weight: 600; text-decoration: none; }
-  .read-more:hover { text-decoration: underline; }
 
-  /* Featured */
   .articles-grid .article-card:first-child { grid-column: 1 / -1; flex-direction: row; }
   .articles-grid .article-card:first-child .card-accent { width: 5px; height: auto; flex-shrink: 0; }
   .articles-grid .article-card:first-child .card-body { padding: 24px 30px; }
   .articles-grid .article-card:first-child .card-title { font-size: 21px; }
   .articles-grid .article-card:first-child .card-text { font-size: 14px; }
-
-  /* Error */
-  .error-box {
-    background: #fff8f5; border: 1px solid #fcd9c8; border-radius: 8px;
-    padding: 20px 24px; color: var(--mid); font-size: 13px; line-height: 1.7;
-  }
-  .error-box strong { color: var(--orange); }
 
   footer {
     background: var(--dark); color: #888; text-align: center;
@@ -165,51 +151,45 @@
 </header>
 
 <main>
-
-  <!-- ACTUALITÉS -->
   <section class="tab-panel active" id="panel-actualites">
     <div class="section-header">
       <div><div class="section-title">Actualités Immobilières</div><div class="section-subtitle">Les dernières nouvelles du marché immobilier français</div></div>
       <span class="section-badge">En continu</span>
     </div>
-    <p class="source-credit">Sources : <span>SeLoger · Le Figaro Immobilier · Challenges</span> — mis à jour automatiquement</p>
+    <p class="source-credit">Sources : <span>Le Monde · Le Figaro · Les Échos · SeLoger</span></p>
     <div class="loader" id="loader-actualites"><div class="spinner"></div> Chargement des actualités…</div>
     <div class="articles-grid" id="grid-actualites"></div>
   </section>
 
-  <!-- JURIDIQUE -->
   <section class="tab-panel" id="panel-juridique">
     <div class="section-header">
       <div><div class="section-title">Juridique &amp; Fiscal</div><div class="section-subtitle">Droit immobilier, fiscalité, réglementation</div></div>
       <span class="section-badge">Droit immobilier</span>
     </div>
-    <p class="source-credit">Sources : <span>Légifrance · PAP · L'Express Immo</span> — mis à jour automatiquement</p>
-    <div class="loader" id="loader-juridique"><div class="spinner"></div> Chargement des actualités juridiques…</div>
+    <p class="source-credit">Sources : <span>PAP · L'Express · Capital</span></p>
+    <div class="loader" id="loader-juridique"><div class="spinner"></div> Chargement…</div>
     <div class="articles-grid" id="grid-juridique"></div>
   </section>
 
-  <!-- INVESTISSEMENT -->
   <section class="tab-panel" id="panel-investissement">
     <div class="section-header">
       <div><div class="section-title">Investissement Locatif</div><div class="section-subtitle">Stratégies, rendements &amp; conseils pour investisseurs</div></div>
       <span class="section-badge">Stratégie &amp; rendement</span>
     </div>
-    <p class="source-credit">Sources : <span>MeilleursAgents · Capital Immo · BFM Immo</span> — mis à jour automatiquement</p>
-    <div class="loader" id="loader-investissement"><div class="spinner"></div> Chargement des analyses…</div>
+    <p class="source-credit">Sources : <span>MeilleursAgents · BFM Business · Capital</span></p>
+    <div class="loader" id="loader-investissement"><div class="spinner"></div> Chargement…</div>
     <div class="articles-grid" id="grid-investissement"></div>
   </section>
 
-  <!-- LOCAL -->
   <section class="tab-panel" id="panel-local">
     <div class="section-header">
-      <div><div class="section-title">Hauts-de-France</div><div class="section-subtitle">Actualités immobilières régionales – Lens, Arras, Artois, Bassin Minier</div></div>
+      <div><div class="section-title">Hauts-de-France</div><div class="section-subtitle">Actualités régionales – Lens, Arras, Artois, Bassin Minier</div></div>
       <span class="section-badge">Région &amp; local</span>
     </div>
-    <p class="source-credit">Sources : <span>La Voix du Nord · L'Observateur · SeLoger Régions</span> — mis à jour automatiquement</p>
-    <div class="loader" id="loader-local"><div class="spinner"></div> Chargement des actualités régionales…</div>
+    <p class="source-credit">Sources : <span>La Voix du Nord · L'Observateur du Cambrésis</span></p>
+    <div class="loader" id="loader-local"><div class="spinner"></div> Chargement…</div>
     <div class="articles-grid" id="grid-local"></div>
   </section>
-
 </main>
 
 <footer>
@@ -220,11 +200,9 @@
 </footer>
 
 <script>
-// ── Date ──
 document.getElementById('current-date').textContent =
   new Date().toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
 
-// ── Tabs ──
 function switchTab(name, el) {
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -232,37 +210,18 @@ function switchTab(name, el) {
   el.classList.add('active');
 }
 
-// ── Flux RSS via rss2json (proxy CORS gratuit) ──
-// Chaque flux est un objet {url, label}
-const FEEDS = {
-  actualites: [
-    { url: 'https://www.seloger.com/news/feed/', label: 'SeLoger' },
-    { url: 'https://immobilier.lefigaro.fr/rss/actualites.xml', label: 'Le Figaro Immo' },
-    { url: 'https://www.challenges.fr/immobilier/rss.xml', label: 'Challenges' },
-  ],
-  juridique: [
-    { url: 'https://www.pap.fr/rss/actualites', label: 'PAP' },
-    { url: 'https://www.lexpress.fr/actualite/immobilier/rss.xml', label: "L'Express Immo" },
-    { url: 'https://www.logic-immo.com/actualite/rss.xml', label: 'Logic Immo' },
-  ],
-  investissement: [
-    { url: 'https://www.meilleursagents.com/actualites/flux-rss/', label: 'MeilleursAgents' },
-    { url: 'https://www.capital.fr/immobilier/feed', label: 'Capital Immo' },
-    { url: 'https://bfmbusiness.bfmtv.com/rss/immobilier/', label: 'BFM Business' },
-  ],
-  local: [
-    { url: 'https://www.lavoixdunord.fr/arc/outboundfeeds/rss/category/immobilier/', label: 'La Voix du Nord' },
-    { url: 'https://www.seloger.com/news/feed/', label: 'SeLoger' },
-    { url: 'https://www.journaldelagence.com/rss', label: 'Journal de l\'Agence' },
-  ]
+// Requêtes Google News RSS (pas de CORS car JSONP/scriptTag)
+const QUERIES = {
+  actualites:    'immobilier+marché+france',
+  juridique:     'immobilier+loi+fiscalité+juridique',
+  investissement:'investissement+locatif+rendement+immeuble',
+  local:         'immobilier+lens+arras+pas-de-calais+hauts-de-france'
 };
-
-const API = 'https://api.rss2json.com/v1/api.json?rss_url=';
 
 function stripHtml(html) {
   const d = document.createElement('div');
   d.innerHTML = html || '';
-  return d.textContent || d.innerText || '';
+  return (d.textContent || d.innerText || '').trim();
 }
 
 function truncate(str, n) {
@@ -272,21 +231,32 @@ function truncate(str, n) {
 
 function formatDate(str) {
   if (!str) return '';
-  try {
-    return new Date(str).toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'});
-  } catch(e) { return str; }
+  try { return new Date(str).toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'}); }
+  catch(e) { return ''; }
 }
 
 function esc(s) {
-  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
 
-async function fetchFeed(feedObj) {
+// Utilise AllOrigins comme proxy CORS universel gratuit
+async function fetchGoogleNews(query) {
+  const rssUrl = `https://news.google.com/rss/search?q=${query}&hl=fr&gl=FR&ceid=FR:fr`;
+  const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(rssUrl)}`;
   try {
-    const res = await fetch(API + encodeURIComponent(feedObj.url) + '&count=4&api_key=xbpuTransportation');
+    const res = await fetch(proxyUrl);
     const data = await res.json();
-    if (data.status !== 'ok' || !data.items) return [];
-    return data.items.map(item => ({ ...item, _source: feedObj.label }));
+    if (!data.contents) return [];
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(data.contents, 'text/xml');
+    const items = Array.from(xml.querySelectorAll('item')).slice(0, 8);
+    return items.map(item => ({
+      title:   item.querySelector('title')?.textContent || '',
+      link:    item.querySelector('link')?.textContent || '#',
+      desc:    item.querySelector('description')?.textContent || '',
+      date:    item.querySelector('pubDate')?.textContent || '',
+      source:  item.querySelector('source')?.textContent || 'Google News'
+    }));
   } catch(e) {
     return [];
   }
@@ -298,44 +268,42 @@ async function loadTab(tab) {
   loader.classList.remove('hidden');
   grid.innerHTML = '';
 
-  const feeds = FEEDS[tab];
-  const results = await Promise.all(feeds.map(f => fetchFeed(f)));
-  const all = results.flat();
-
+  const articles = await fetchGoogleNews(QUERIES[tab]);
   loader.classList.add('hidden');
 
-  if (all.length === 0) {
-    grid.innerHTML = `<div class="error-box">
-      <strong>Flux temporairement indisponibles.</strong><br/>
-      Les sources RSS sont parfois inaccessibles selon votre navigateur (CORS).<br/>
-      Réessayez dans quelques instants ou consultez directement les sources ci-dessus.
+  if (!articles.length) {
+    // Fallback : contenu statique de secours si le réseau échoue
+    grid.innerHTML = `<div style="grid-column:1/-1;background:#fff8f5;border:1px solid #fcd9c8;border-radius:8px;padding:24px;color:#5a5a5a;font-size:13px;line-height:1.8">
+      <strong style="color:#E8690A;font-size:15px;">Actualités temporairement indisponibles</strong><br/>
+      Consultez directement les sources :<br/>
+      <a href="https://www.seloger.com/news/" target="_blank" style="color:#E8690A">SeLoger Actualités</a> &nbsp;·&nbsp;
+      <a href="https://immobilier.lefigaro.fr/" target="_blank" style="color:#E8690A">Le Figaro Immobilier</a> &nbsp;·&nbsp;
+      <a href="https://www.capital.fr/immobilier" target="_blank" style="color:#E8690A">Capital Immobilier</a> &nbsp;·&nbsp;
+      <a href="https://www.lavoixdunord.fr/immobilier" target="_blank" style="color:#E8690A">La Voix du Nord</a>
     </div>`;
     return;
   }
 
-  // Mélange et limite à 8 articles
-  const shuffled = all.sort(() => Math.random() - 0.5).slice(0, 8);
-
-  grid.innerHTML = shuffled.map((item, i) => `
-    <a class="article-card" href="${esc(item.link)}" target="_blank" rel="noopener" style="animation-delay:${i*0.06}s">
+  grid.innerHTML = articles.map((a, i) => `
+    <a class="article-card" href="${esc(a.link)}" target="_blank" rel="noopener" style="animation-delay:${i*0.06}s">
       <div class="card-accent"></div>
       <div class="card-body">
-        <div class="card-tag">${esc(item._source)}</div>
-        <h2 class="card-title">${esc(truncate(item.title, 90))}</h2>
-        <p class="card-text">${esc(truncate(item.description || item.content || '', 160))}</p>
+        <div class="card-tag">${esc(a.source)}</div>
+        <h2 class="card-title">${esc(truncate(a.title, 100))}</h2>
+        <p class="card-text">${esc(truncate(a.desc, 180))}</p>
         <div class="card-footer">
-          <span class="card-date">📅 ${formatDate(item.pubDate)}</span>
-          <span class="card-source">Lire l'article →</span>
+          <span class="card-date">📅 ${formatDate(a.date)}</span>
+          <span class="card-source">Lire →</span>
         </div>
       </div>
     </a>`).join('');
 }
 
-// ── Init : charger l'onglet actif + précharger les autres en arrière-plan ──
+// Chargement progressif
 loadTab('actualites');
-setTimeout(() => loadTab('juridique'), 500);
-setTimeout(() => loadTab('investissement'), 1000);
-setTimeout(() => loadTab('local'), 1500);
+setTimeout(() => loadTab('juridique'), 300);
+setTimeout(() => loadTab('investissement'), 600);
+setTimeout(() => loadTab('local'), 900);
 </script>
 </body>
 </html>
